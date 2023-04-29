@@ -8,17 +8,20 @@ import {
   StatsDataItem,
   TitleStatsDataItem,
   ValueStatsDataItem,
+  Name,
+  Tag,
+  Location,
 } from '../Profile/Profile.styled';
 
-export default function Profile({ username, tag, location, avatar, stats }) {
+const Profile = ({ username, tag, location, avatar, stats }) => {
   const { followers, views, likes } = stats;
   return (
     <ProfileDiv>
       <Description>
         <Avatar src={avatar} alt="User avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">{tag}</p>
-        <p className="location">{location}</p>
+        <Name>{username}</Name>
+        <Tag>{tag}</Tag>
+        <Location>{location}</Location>
       </Description>
 
       <StatsData>
@@ -37,36 +40,9 @@ export default function Profile({ username, tag, location, avatar, stats }) {
       </StatsData>
     </ProfileDiv>
   );
-}
+};
 
-// export default function Profile({ username, tag, location, avatar, stats }) {
-//   const { followers, views, likes } = stats;
-//   return (
-//     <ProfileDiv className="profile">
-//       <div className="description">
-//         <img src={avatar} alt="User avatar" className="avatar" />
-//         <p className="name">{username}</p>
-//         <p className="tag">{tag}</p>
-//         <p className="location">{location}</p>
-//       </div>
-
-//       <ul className="stats">
-//         <li>
-//           <span className="label">Followers</span>
-//           <span className="quantity">{followers}</span>
-//         </li>
-//         <li>
-//           <span className="label">Views</span>
-//           <span className="quantity">{views}</span>
-//         </li>
-//         <li>
-//           <span className="label">Likes</span>
-//           <span className="quantity">{likes}</span>
-//         </li>
-//       </ul>
-//     </ProfileDiv>
-//   );
-// }
+export default Profile;
 
 Profile.propTypes = {
   username: PropTypes.string,

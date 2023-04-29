@@ -1,5 +1,13 @@
 @import-normalize; /* bring in normalize.css styles */
 
+:root {
+  --background-body: #eaecf6;
+  --white: #ffffff;
+  --border-color: #d3d3d3;
+  --background-ul: #f5f6f8;
+  --secondary-text-color: #a9a9a9;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,6 +15,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-body);
 }
 
 code {
@@ -14,15 +23,22 @@ code {
     monospace;
 }
 
-li {
-  list-style-type: none;
-  /* Убираем маркеры */
-}
-
-ul {
-  margin-left: 0;
-  /* Отступ слева в браузере IE и Opera */
-  padding-left: 0;
-  /* Отступ слева в браузере Firefox, Safari, Chrome */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   margin: 0;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
