@@ -1,9 +1,11 @@
-import FriendListItem from './FriendListItem';
+import FriendListCard from './FriendListCard';
 
-export default function FriendList({ friends }) {
+const FriendList = ({ friends }) => {
   return (
     <ul className="friend-list">
-      {friends.map(friend => FriendListItem(friend))}
+      {friends.map(friend => FriendListCard(friend))}
     </ul>
   );
-}
+};
+
+export default FriendList;
