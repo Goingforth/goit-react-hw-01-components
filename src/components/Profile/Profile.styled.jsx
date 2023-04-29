@@ -19,6 +19,8 @@ export const ProfileDiv = styled.div`
   border-radius: 2%;
 
   background-color: var(--white);
+
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 `;
 
 export const Description = styled.div`
