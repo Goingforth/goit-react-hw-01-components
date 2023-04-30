@@ -3,11 +3,13 @@ import styled from '@emotion/styled';
 export const Card = styled.li`
   display: flex;
   align-items: center;
-  width: 28%;
+  width: 20%;
   padding: 12px;
 
   border: 1px solid var(--border-color);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+
+  background-color: var(--white);
 `;
 
 export const Img = styled.img`
@@ -22,8 +24,8 @@ export const Name = styled.p`
 `;
 
 export const Status = styled.span`
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
 
   margin-right: 24px;
   background-color: ${props => {

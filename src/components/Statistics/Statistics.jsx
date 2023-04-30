@@ -1,22 +1,33 @@
 import PropTypes from 'prop-types';
-export default function Statistics({ stats }) {
+//import { getRandomColor } from './getRandomColor';
+import {
+  Section,
+  StatList,
+  Item,
+  Title,
+  Percentage,
+  Label,
+} from './Statistics.styled';
+
+const Statistics = ({ title, stats }) => {
   return (
-    <section className="statistics">
-      <h2 className="title">{}</h2>
-
-      <ul className="stat-list">
-        {stats.map(item => (
-          <li key={item.id} className="item">
-            <span className="label">{item.label}</span>
-            <span className="percentage">{item.percentage}</span>
-          </li>
+    <Section>
+      {title && <Title>{title.toUpperCase()}</Title>}
+      <StatList className="stat-list">
+        {stats.map(({ id, label, percentage }) => (
+          <Item key={id}>
+            <Label>{label}</Label>
+            <Percentage>{percentage}</Percentage>
+          </Item>
         ))}
-      </ul>
-    </section>
+      </StatList>
+    </Section>
   );
-}
+};
 
+export default Statistics;
 Statistics.propTypes = {
+  title: PropTypes.string,
   label: PropTypes.string,
   percentage: PropTypes.number,
 };
