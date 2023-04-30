@@ -5,7 +5,7 @@ export const Table = styled.table`
   border-collapse: collapse;
   background: var(--background-table);
   width: 70%;
-  margin: 5% auto 0;
+  margin: 32px auto 0;
   border-radius: 5px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 
