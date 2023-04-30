@@ -1,3 +1,5 @@
+import { NameTask } from './HomeworkTask.styled';
+
 export default function HomeworkTask({ task }) {
-  return <h2>{task.value}</h2>;
+  return <NameTask>{task}</NameTask>;
 }
