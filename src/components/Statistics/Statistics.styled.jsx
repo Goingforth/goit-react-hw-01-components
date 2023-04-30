@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { getRandomColor } from './getRandomColor';
 
 export const Section = styled.section`
   position: relative;
@@ -38,8 +37,6 @@ export const Item = styled.li`
 
   padding-top: 12px;
   padding-bottom: 12px;
-
-  background-color: ${getRandomColor()};
 `;
 
 export const Label = styled.span`
