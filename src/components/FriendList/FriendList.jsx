@@ -1,10 +1,9 @@
 import FriendListCard from './FriendListCard';
+import { ListFriend } from './FriendList.styled';
 
 const FriendList = ({ friends }) => {
   return (
-    <ul className="friend-list">
-      {friends.map(friend => FriendListCard(friend))}
-    </ul>
+    <ListFriend>{friends.map(friend => FriendListCard(friend))}</ListFriend>
   );
 };
 

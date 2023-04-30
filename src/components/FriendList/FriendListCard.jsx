@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import { Card, Img, Name } from './FriendListCard.styled';
+import { Card, Img, Name, Status } from './FriendListCard.styled';
 
 const FriendListCard = ({ avatar, name, isOnline, id }) => {
   return (
     <Card key={id}>
-      <span className="status">{isOnline}</span>
+      <Status isOnline={isOnline}> </Status>
       <Img src={avatar} alt="User avatar" width="48" />
       <Name>{name}</Name>
     </Card>

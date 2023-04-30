@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 export const Card = styled.li`
   display: flex;
   align-items: center;
-  width: 30%;
+  width: 28%;
   padding: 12px;
 
   border: 1px solid var(--border-color);
@@ -17,6 +17,18 @@ export const Img = styled.img`
 `;
 
 export const Name = styled.p`
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
+`;
+
+export const Status = styled.span`
+  width: 22px;
+  height: 22px;
+
+  margin-right: 24px;
+  background-color: ${props => {
+    return props.isOnline ? 'green' : 'red';
+  }};
+
+  border-radius: 50%;
 `;
