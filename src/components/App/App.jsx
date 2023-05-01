@@ -1,5 +1,3 @@
-import HomeworkTask from 'components/HomeworkTask/HomeworkTask';
-
 import Profile from '../Profile/Profile';
 import user from '../../data/user';
 
@@ -15,8 +13,6 @@ import transactions from '../../data/transactions';
 export const App = () => {
   return (
     <div>
-      <HomeworkTask task="1. Профиль социальной сети" />
-
       <Profile
         username={user.username}
         tag={user.tag}
@@ -25,19 +21,11 @@ export const App = () => {
         stats={user.stats}
       />
 
-      <HomeworkTask task="2. Секция статистики" />
-
       <Statistics title="Upload stats" stats={data} />
-
-      <HomeworkTask task="2.1. Секция статистики без пропа title" />
 
       <Statistics stats={data} />
 
-      <HomeworkTask task="3. Список друзей" />
-
       <FriendList friends={friends} />
-
-      <HomeworkTask task="4. История транзакций" />
 
       <TransactionHistory items={transactions} />
     </div>
